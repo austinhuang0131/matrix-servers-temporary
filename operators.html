@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Information for Homeserver Operators - Public Matrix Homeserver List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>.serverWarning {margin-bottom: 12px;} .serverWarning > p {margin-bottom: 0px}</style>
+  </head>
+  <body style="margin-left: auto; margin-right: auto; position: relative;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" style="padding-left: 24px; padding-right: 24px;">
+            <a class="navbar-brand" href="./">Public Matrix Homeservers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://joinmatrix.org">Back to JoinMatrix.org</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More info</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./users.html">For users</a></li>
+                        <li><a class="dropdown-item active" aria-current="page" href="./operators.html">For homeserver operators</a></li>
+                        <li><a class="dropdown-item" href="./developers.html">For client developers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="padding: 24px">
+        <h2>Information for Homeserver Operators</h2>
+        <span class="card text-bg-info card-body serverWarning">
+            <p>
+                All new homeservers require explicit consent from the operators to be included in the list.
+                If you're just a user, you're welcomed to contact your operators.
+            </p>
+        </span>
+        <p>Welcome, and thank you for running a public homeserver! Your effort will support one of Matrix's core values - decentralisation.</p>
+        <p>If you comply with the following criteria, you should ask me, at <code>@austin:tchncs.de</code>, to have your homeserver included on the list. If the homeserver fails to meet any criterion after inclusion, it will be removed with or without notice.</p>
+        <h3>Criteria</h3>
+        <h4 id="absolute-criteria">Absolute Criteria</h4>
+        <h5>Intention to Run Publicly</h5>
+        <p>The homeserver is advertised as operating for the public. If conditional registration is implemented, then the approval process must be clearly defined.</p>
+        <h5>Stability</h5>
+        <p>The homeserver <em>intends</em> to operate for the long term.</p>
+        <p>Homeservers will be removed if they have excessive outages (eg. outages lasting for days are not acceptable).</p>
+        <h5>Professionalism</h5>
+        <p>The homeserver's name must be a second-level domain; see also <a href="https://matrix-org.github.io/synapse/latest/delegate.html">Synapse documentation on domain delegation</a>.</p>
+        <p>The homeserver must not use a free TLD, especially those offered by Freenom, due to risks of takeover by fraudulent entities.</p>
+        <h5>Independence</h5>
+        <p>The homeserver is neither matrix.org nor operated by Element Matrix Services (previously known as Modular).</p>
+        <h5>Reputation</h5>
+        <p>The homeserver must not be banned from official matrix.org rooms nor be banned by <a href="https://matrix.to/#/#community-moderation-effort-bl:neko.dev">Community Moderation Effort</a>.</p>
+        <h4>Subjective Criteria</h4>
+        <p>The following is determined solely at my discretion.</p>
+        <h5>Legality</h5>
+        <p>
+            The homeserver must not be <em>intentionally</em> promoting illegal activity.
+            While varying legal landscapes of the world makes it difficult to come up with a universal definition of illegality, anything that is clearly criminal under most Western jurisdictions is explicitly forbidden.
+        </p>
+        <h5>Reputation</h5>
+        <p>Public content associated with the homeserver as well as its operators may be inspected for any reputation concerns. This is necessary to maintain a safe environment for prospective users as well as to control my liability in running this list.</p>
+        <h4>Recommended Measures</h4>
+        <p>While the following are not required, but abiding by them will provide a better experience for prospective users:</p>
+        <ul>
+            <li>A page should be provided that describes the homeserver.</li>
+            <li>A <a href="https://github.com/matrix-org/matrix-spec-proposals/blob/hs/proposal-admin-contact-1/proposals/1929-admin-contact.md">MSC1929</a> endpoint should be provided for contacting the operators.</li>
+            <li>Rules & privacy policy is strongly recommended. They do not have to be formal: a statement in plain language describing expectations of user conduct, as well as your data protections measures, is sufficient.</li>
+        </ul>
+        <footer style="padding-top: 24px">
+            <p class="text-center text-body-secondary">Maintained by <a href="https://austinhuang.me">Austin Huang</a>.<br>Not affiliated with The Matrix.org Foundation C.I.C. or New Vector Ltd.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

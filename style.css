@@ -1,0 +1,25 @@
+.serverDetails {
+    margin-top: var(--bs-list-group-item-padding-y);
+}
+
+.serverWarning {
+    margin-bottom: var(--bs-list-group-item-padding-y);
+}
+
+.server:hover {
+    cursor: auto !important;
+}
+
+.serverTitle {
+    border: none;
+    background: none;
+    width: 100%
+}
+
+.serverTitle:hover {
+    cursor: pointer !important;
+}
+
+.serverTitle .badge {
+    margin: 2.5px;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Information for Matrix Users - Public Matrix Homeserver List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>.serverWarning {margin-bottom: 12px;} .serverWarning > p {margin-bottom: 0px}</style>
+  </head>
+  <body style="margin-left: auto; margin-right: auto; position: relative;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" style="padding-left: 24px; padding-right: 24px;">
+            <a class="navbar-brand" href="./">Public Matrix Homeservers</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://joinmatrix.org">Back to JoinMatrix.org</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More info</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item active" aria-current="page" href="./users.html">For users</a></li>
+                        <li><a class="dropdown-item" href="./operators.html">For homeserver operators</a></li>
+                        <li><a class="dropdown-item" href="./developers.html">For client developers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div style="padding: 24px">
+        <h2>Information for Matrix Users</h2>
+        <div class="card text-bg-danger card-body serverWarning">
+            <p><b>Please do not register on multiple homeservers.</b>
+            Abusing the limited resources that those servers offer will only discourage others from running new public homeservers.
+            If you're testing one's performance, please do so one at a time, and clean up (delete the account) if you choose not to use that homeserver.
+            </p>
+        </div>
+        <span class="card text-bg-warning card-body serverWarning">
+            <p><b>GENERAL DISCLAIMER:</b> Inclusion does <b>NOT</b> imply any opinion (affiliation, endorsement, etc.) on individual homeservers, nor any guarantee regarding their availability.
+                This list is provided “as is.” Any dispute regarding your account on one of the homeservers should be resolved between you and the operator(s) of the homeserver.
+            </p>
+        </span>
+        <p>
+            Welcome! This site is intended to help you decide which homeserver to base your account on.
+            Please note that, while all listed servers respect the <a href="./operators.html#absolute-criteria">absolute criteria</a>,
+            you're encouraged to do your due diligence before trusting a homeserver. After all, they'll have access to all unencrypted data in your account!
+        </p>
+        <p>
+            Specifically, you should:
+        </p>
+        <ul>
+            <li>Inspect the homeserver's homepage and legal policies, where applicable;</li>
+            <li>Check if the server is <a href="https://federationtester.matrix.org/">federating properly</a>;</li>
+            <li>Verify if the server has an up-to-date version.</li>
+        </ul>
+        <p>The software behind this list is <a href="https://codeberg.org/austinhuang/matrix-serverlist">open source</a>. If you have any questions, please do not hesitate to <a href="https://austinhuang.me/#contact-me">ask me</a>!</p>
+        <h3>Still, how do I select a homeserver?</h3>
+        <p>
+            Unfortunately, Matrix does not provide an endpoint to query how many users a homeserver has. Member distribution on major rooms can be used as reference.
+        </p>
+        <p>
+            Below is a list of homeservers that are included in the homeserver list and have more than 10 members in <code>#community:grapheneos.org</code> on January 2, 2025 (using this room as reference is not an endorsement of it):
+        </p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"># of members</th>
+                <th scope="col">Homeservers (exact member count)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">&gt;= 100</th>
+                <td>tchncs.de (346), nitro.chat (175), envs.net (103)</td>
+              </tr>
+              <tr>
+                <th scope="row">51 ~ 99</th>
+                <td>monero.social (78), arcticfoxes.net (67), nope.chat (53)</td>
+              </tr>
+              <tr>
+                <th scope="row">21 ~ 50</th>
+                <td>catgirl.cloud (34), 4d2.org (25), converser.eu (23), tedomum.net (23)</td>
+              </tr>
+              <tr>
+                <th scope="row">10 ~ 20</th>
+                <td>unredacted.org (20), freiburg.social (10), pub.solar (10)</td>
+              </tr>
+            </tbody>
+        </table>
+        <p>Note that member does not imply "active user." The omission of any homeservers does not mean that they are not stable enough to be used; it simply means that the stability has not been proven in the community.</p>
+        <h3 id="legend">Explanations of certain terminologies</h3>
+        <h4>Version status</h4>
+        <p>There are three version statuses:</p>
+        <ul>
+            <li><span class="badge text-bg-success">Up-to-date</span>
+                means the homeserver is running on a version that is no older than the last stable version that is released at least 1 month ago.</li>
+            <li><span class="badge text-bg-warning">Outdated</span>
+                means the homeserver is running on a version that is strictly older than the last stable version that is released at least 1 month ago.</li>
+            <li>
+                <span class="badge text-bg-danger">Vulnerable</span>
+                means the homeserver is running on a version that has published vulnerabilities.
+                While this does not imply the server being vulnerable (since many vulnerabilities require very specific preconditions),
+                this is an indication that a server is not keeping up with maintenance.
+                If a homeserver has been running on a vulnerable version for too long, it will be delisted.
+            </li>
+        </ul>
+        <h4>"Longstanding"</h4>
+        <p>
+            Any homeserver that was included
+            <a href="https://web.archive.org/web/20210000000000*/https://publiclist.anchel.nl/">on publiclist.anchel.nl</a> (archive)
+            as well as <a href="https://www.hello-matrix.net/public_servers.php">Hello Matrix's homeserver list</a> (no longer updated)
+            is given a <span class="badge text-bg-success">Longstanding</span> label to recognize their longevity.
+        </p>
+        <h4>Manual Registration</h4>
+        <p>
+            When a homeserver does not provide a method to register directly, you may create an account using your preferred Matrix client (if it supports doing so).
+            See <a href="https://joinmatrix.org/guide/#register-an-account">here</a> for the exact procedure.</a>
+        </p>
+        <h3>Frequently-Asked Questions</h3>
+        <h4>Why shouldn't I just use matrix.org?</h4>
+        <p>Because it is way too large, and thus</p>
+        <ul>
+            <li>It has performance issues, for which they are using <a href="https://element.io/blog/scaling-to-millions-of-users-requires-synapse-pro/">proprietary components</a> to resolve, and</li>
+            <li>Being a dominating homeserver, its existence is antithetical to decentralisation.</li>
+        </ul>
+        <p>Of course, Matrix.org tries to address this by <a href="https://arewep2pyet.com">introducing P2P</a>, but it may be a while before it goes into production; even then, P2P is unlikely to be suitable for everyone.</p>
+        <h4>Are there other homeserver lists?</h4>
+        <p>
+            Currently, this is the only comprehensive public homeserver list.
+            The rest are either raw (automatically generated) or <em>intentionally</em> misleading, so they're not as remotely useful as this list.
+        </p>
+        <p>
+            <a href="https://www.chatons.org/search/by-service?service_type_target_id=All&field_alternatives_aux_services_target_id=All&field_software_target_id=274&field_is_shared_value=All&title=">CHATONS</a>
+            has a list of homeservers hosted by various tech cooperatives (mostly French), though most of them require payment.
+        </p>
+        <p>There's also <a href="https://matrix.squirrel.rocks/furry_servers">a short guide</a> on furry homeservers and communities on Matrix.</p>
+        <p>To my understanding, matrix.org will eventually host an official homeserver list.</p>
+        <footer style="padding-top: 24px">
+            <p class="text-center text-body-secondary">Maintained by <a href="https://austinhuang.me">Austin Huang</a>.<br>Not affiliated with The Matrix.org Foundation C.I.C. or New Vector Ltd.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
